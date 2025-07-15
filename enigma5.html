@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enigma 5</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>Enigma 5</h2>
+    <p>Não tem forma, mas faz barulho.
+Não se vê, mas faz dançar o galho.
+Corre sem pernas, assovia sem boca,
+E pode virar furacão se ficar louca.
+O que é?</p>
+    <input type="text" id="resposta5" placeholder="Digite aqui..." />
+    <button onclick="verificarEnigma5()">Enviar</button>
+    <p id="mensagem5"></p>
+  </div>
+  <script>
+    function verificarEnigma5() {
+      const resposta = document.getElementById("resposta5").value.trim().toLowerCase();
+      const mensagem = document.getElementById("mensagem5");
+      if (resposta === "vento") {
+        window.location.href = "sucesso5.html";
+      } else {
+        mensagem.textContent = "Hmm... tente novamente! 💭";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -2,18 +2,28 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Enigma 1</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
     <h2>Enigma 1</h2>
-    <p>Qual foi a <strong>primeira palavra</strong> pela qual você me chamou, lá no comecinho?</p>
-    <input type="text" id="resposta" placeholder="Digite sua resposta..." />
-    <button onclick="verificarResposta()">Enviar</button>
-    <p id="mensagem"></p>
+    <p>A primeira palavra pela qual me chamou a primeira vez?</p>
+    <input type="text" id="resposta1" placeholder="Digite aqui..." />
+    <button onclick="verificarEnigma1()">Enviar</button>
+    <p id="mensagem1"></p>
   </div>
-  <script src="script.js"></script>
+  <script>
+    function verificarEnigma1() {
+      const resposta = document.getElementById("resposta1").value.trim().toLowerCase();
+      const mensagem = document.getElementById("mensagem1");
+      if (resposta === "maicon") {
+        window.location.href = "sucesso1.html";
+      } else {
+        mensagem.textContent = "Hmm... tente novamente! 💭";
+      }
+    }
+  </script>
 </body>
 </html>
