@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enigma 2</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>Enigma 2</h2>
+    <p>Qual assunto juntou nós dois?</p>
+    <input type="text" id="resposta2" placeholder="ZADA" />
+    <button onclick="verificarEnigma2()">Enviar</button>
+    <p id="mensagem2"></p>
+  </div>
+  <script>
+    function verificarEnigma2() {
+      const resposta = document.getElementById("resposta2").value.trim().toLowerCase();
+      const mensagem = document.getElementById("mensagem2");
+      if (resposta === "up") {
+        window.location.href = "sucesso2.html";
+      } else {
+        mensagem.textContent = "Ainda não... tente lembrar 🍿";
+      }
+    }
+  </script>
+</body>
+</html>
