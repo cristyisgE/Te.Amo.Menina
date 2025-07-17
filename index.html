@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Player</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Te Amo Menina</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <audio id="player" autoplay></audio>
+  <div class="container">
+    <h1>Te Amo, Meu Bem 💖</h1>
+    <p>Você está prestes a começar uma jornada com 6 enigmas. A cada um resolvido, você recebe uma palavra aleatória.</p>
+    <a href="#" id="startBtn" class="button">Começar</a> <!-- botão modificado -->
+  </div>
+
+  <audio id="player"></audio>
 
   <script>
     const player = document.getElementById("player");
@@ -21,7 +29,18 @@
     }
 
     player.addEventListener("ended", playNext);
-    playNext();
+
+    document.getElementById("startBtn").addEventListener("click", (e) => {
+      e.preventDefault(); // impede o redirecionamento imediato
+
+      current = 0;
+      playNext();
+
+      // Aguarda 3 segundos antes de redirecionar
+      setTimeout(() => {
+        window.location.href = "enigma1.html";
+      }, 3000);
+    });
   </script>
 </body>
 </html>
