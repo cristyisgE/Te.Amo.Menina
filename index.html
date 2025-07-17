@@ -9,27 +9,12 @@
 <body>
   <div class="container">
     <h1>Te Amo, Meu Bem 💖</h1>
-    <p>Você está prestes a começar uma jornada com 6 enigmas. A cada um resolvido, você recebe uma palavra aleatória.</p>
+    <p>Você está prestes a começar uma jornada com 6 enigmas. A cada um resolvido, você recebe uma palavra especial.</p>
     <a href="enigma1.html" class="button">Começar</a>
   </div>
- <audio id="player" autoplay>
-  <source src="musica1.mp3" type="audio/mpeg">
-  Seu navegador não suporta áudio.
-</audio>
-
-<script>
-  const player = document.getElementById("player");
-  const playlist = ["musica1.mp3", "musica2.mp3", "musica3.mp3"];
-  let current = 0;
-
-  player.addEventListener("ended", () => {
-    current++;
-    if (current < playlist.length) {
-      player.src = playlist[current];
-      player.play();
-    }
-  });
-</script>
-
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
 </body>
 </html>
