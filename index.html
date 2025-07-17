@@ -1,24 +1,19 @@
-  <script>
-    const player = document.getElementById("player");
-    const playlist = ["musica1.mp3", "musica2.mp3", "musica3.mp3"];
-    let current = 0;
-
-    function playNext() {
-      if (current < playlist.length) {
-        player.src = playlist[current];
-        player.play();
-        current++;
-      }
-    }
-  });
-</script>
-
-    // Começa a tocar a primeira música
-    playNext();
-
-    // Quando a música termina, toca a próxima
-    player.addEventListener("ended", playNext);
-  </script>
-
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Te Amo Menina</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Te Amo, Meu Bem 💖</h1>
+    <p>Você está prestes a começar uma jornada com 6 enigmas. A cada um resolvido, você recebe uma palavra aleatória.</p>
+    <a href="enigma1.html" class="button">Começar</a>
+  </div>
+ <audio id="player" autoplay>
+  <source src="musica1.mp3" type="audio/mpeg">
+  <source src="musica1.mp3", "musica2.mp3", musica3.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
