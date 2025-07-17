@@ -11,10 +11,40 @@
     <h1>Te Amo, Meu Bem 💖</h1>
     <p>Você está prestes a começar uma jornada com 6 enigmas. A cada um resolvido, você recebe uma palavra especial.</p>
     <a href="enigma1.html" class="button">Começar</a>
+    
+    <!-- Botão para iniciar as músicas -->
+    <button id="playMusic" class="button">Tocar Música 🎵</button>
   </div>
+<<<<<<< HEAD
   <audio autoplay loop>
     <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
+=======
+
+  <audio id="player"></audio>
+
+  <script>
+    const player = document.getElementById("player");
+    const playlist = ["musica1.mp3", "musica2.mp3", "musica3.mp3"];
+    let current = 0;
+
+    function playNext() {
+      if (current < playlist.length) {
+        player.src = playlist[current];
+        player.play().catch(error => console.error("Erro ao tocar:", error));
+        current++;
+      }
+    }
+
+    player.addEventListener("ended", playNext);
+
+    // Inicia ao clicar no botão
+    document.getElementById("playMusic").addEventListener("click", () => {
+      current = 0;
+      playNext();
+    });
+  </script>
+>>>>>>> 28e96dd81810029ccff498b6cfd321466a2cbb1f
 </body>
 </html>
