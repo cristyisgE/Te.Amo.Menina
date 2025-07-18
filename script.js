@@ -5,6 +5,6 @@ function verificarResposta() {
   if (resposta === "maicon") {
     window.location.href = "sucesso.html";
   } else {
-    mensagem.textContent = "Hmm... não é isso. Tente lembrar com carinho 💭";
+    mensagem.textContent = "Hmm... não é isso. Tente lembrar com carinho ";
   }
 }
